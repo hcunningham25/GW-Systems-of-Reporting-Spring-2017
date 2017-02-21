@@ -1,0 +1,8 @@
+1.	SELECT state, SUM(amount) FROM mandel GROUP BY state;
+2 . SELECT purpose, SUM(amount) FROM mandel GROUP BY purpose ORDER by SUM (amount) desc
+
+3.	SELECT SUM (amount) FROM mandel WHERE purpose LIKE 'shipping%';
+
+4.	SELECT month, SUM(amount) FROM mandel GROUP BY month ORDER by SUM (amount) desc
+
+5.	SELECT SUM (amount) FROM mandel WHERE purpose = 'payroll expenses' >< purpose=payroll taxes or payroll fees
