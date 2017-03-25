@@ -15,7 +15,7 @@ for row in table.findAll('tr'):
     for cell in row.findAll('td'):
 		list_of_rows.append(list_of_cells)
 
-outfile = open("executions.csv")
+outfile = open("executions.csv", "wb")
 writer = csv.writer(outfile)
-writer.writerow(["scheduled_execution", "link", "last_name", "first_name", "TDCJ_number", "date_of_birth", "race", "date_received", "county"])
+writer.writerow(["scheduled_execution", "link", "last_name", "first_name", "tdcj_number", "date_of_birth", "race", "date_received", "county"])
 writer.writerows(list_of_rows)
